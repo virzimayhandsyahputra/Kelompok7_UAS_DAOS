@@ -21,3 +21,39 @@ void tampilkanWarga(Node *w)
     printf("Desil Sistem        : %d\n", w->data.desil_sistem);
     printf("Status              : %s\n", w->data.status);
 }
+
+void tampil_warga_urut(Node* head)
+{
+    if (head == NULL)
+    {
+        printf("Data warga kosong.\n");
+        return;
+    }
+
+    printf("\nDAFTAR WARGA BERDASARKAN SKOR (TERTINGGI KE TERENDAH)\n");
+
+    printf("============================================================\n");
+    printf("%-4s %-20s %-10s %-20s\n",
+           "No",
+           "Nama",
+           "Skor",
+           "Status");
+    printf("============================================================\n");
+
+    int no = 1;
+    Node* current = head;
+
+    while (current != NULL)
+    {
+        printf("%-4d %-20s %-10d %-20s\n",
+               no,
+               current->data.nama,
+               current->data.total_skor,
+               current->data.status);
+
+        current = current->next;
+        no++;
+    }
+
+    printf("============================================================\n");
+}
