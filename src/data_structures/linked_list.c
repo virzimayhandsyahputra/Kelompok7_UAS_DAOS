@@ -4,6 +4,33 @@
 #include "scoring.h"
 #include "evaluasi.h"
 
+void insert_warga(Node** head, Warga data_baru) {
+    // alokasi memori untuk node baru
+    Node* node_baru = (Node*)malloc(sizeof(Node));
+    if (node_baru == NULL) {
+        printf("Gagal mengalokasikan memori!\n");
+        return;
+    }
+    
+    //salinn data ke dalam node baru
+    node_baru->data = data_baru;
+    node_baru->next = NULL;
+
+    if (*head == NULL) {
+        *head = node_baru;
+        return;
+    }
+
+    //cari node terakhir
+    Node* temp = *head;
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+
+    //menyambungkan node baru di akhir
+    temp->next = node_baru;
+}
+
 void proses_semua_warga(Node* head, Queue* q_verifikasi, PriorityQueue* pq_layak) {
     if (head == NULL) {
         printf("[LinkedList] Data warga kosong.\n");
