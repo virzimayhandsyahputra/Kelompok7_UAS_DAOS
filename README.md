@@ -7,7 +7,7 @@
 | 2  | **Fauzana Izzati**          | 250810701100091 |
 | 3  | **Althaffia Putri**         | 250810701100036 |
 | 4  | **Shelvya Pratiwi**         | 250810701100041 |
-| 5  | **Shofy Suhaila Putri**     | 2508107011000 |
+| 5  | **Shofy Suhaila Putri**     | 250810701100007 |
 
 ## **Kompilasi & Cara Menjalankan**
 ### Menggunakan Makefile
