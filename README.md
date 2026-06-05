@@ -3,7 +3,7 @@
 
 | No | Nama                        | NPM             |
 | -- | --------------------------- | --------------- |
-| 1  | **Virzi Mayhand Syahputra** | 2508107011000 |
+| 1  | **Virzi Mayhand Syahputra** | 250810701100077 |
 | 2  | **Fauzana Izzati**          | 250810701100091 |
 | 3  | **Althaffia Putri**         | 250810701100036 |
 | 4  | **Shelvya Pratiwi**         | 250810701100041 |
