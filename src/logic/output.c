@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "output.h"
+#include "../logic/output.h"
 
 // Menampilkan data warga yang ditemukan
 void tampilkanWarga(Node *w)

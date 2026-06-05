@@ -1,5 +1,5 @@
 #include <string.h>
-#include "linear_search.h"
+#include "../algorithms/linear_search.h"
 
 // Melakukan pencarian nama pada linked list
 Node* search_warga(Node *head, const char *nama) {

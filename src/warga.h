@@ -13,7 +13,7 @@ typedef struct {
     //variabel tambahan untuk opsi 3
     int total_skor;
     int desil_sistem;
-    char status[30]; // "Layak", "Perlu Verifikasi", "Tidak Layak"
+    char status[30];
 } Warga;
 
 //struct node untuk linked list
@@ -21,5 +21,20 @@ typedef struct Node {
     Warga data;
     struct Node* next;
 } Node;
+
+// struct queueu
+typedef struct QueueNode {
+    Node             *node;
+    struct QueueNode *next;
+} QueueNode;
+
+typedef struct Queue {
+    QueueNode *front;
+    QueueNode *rear;
+    int        size;
+} Queue;
+
+
+
 
 #endif

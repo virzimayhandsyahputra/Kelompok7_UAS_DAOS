@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "linked_list.h"
-#include "scoring.h"
-#include "evaluasi.h"
+#include "../logic/scoring.h"
+#include "../logic/evaluasi.h"
+
 
 void insert_warga(Node** head, Warga data_baru) {
     // alokasi memori untuk node baru

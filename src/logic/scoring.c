@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "scoring.h"
+#include "../logic/scoring.h"
 
 static int hitung_poin_penghasilan(long penghasilan) {
     if (penghasilan < 500000)                              return 40;

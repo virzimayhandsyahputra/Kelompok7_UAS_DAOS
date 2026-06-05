@@ -1,7 +1,7 @@
 #ifndef MERGE_SORT_H
 #define MERGE_SORT_H
 
-#include "warga.h"
+#include "../warga.h"
 
 Node* mergeSort(Node* head);
 Node* merge(Node* kiri, Node* kanan);

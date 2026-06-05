@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "merge_sort.h"
+#include "../algorithms/merge_sort.h"
 
 // Membagi linked list jadi dua bagian
 void splitList(Node* sumber, Node** depan, Node** belakang){
