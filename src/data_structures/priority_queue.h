@@ -7,5 +7,6 @@ void  init_pq(PriorityQueue *pq);
 void  pq_enqueue(PriorityQueue *pq, Node *node);
 Node *pq_dequeue(PriorityQueue *pq);
 int   pq_kosong(PriorityQueue *pq);
+void  tampil_pq_layak(PriorityQueue *pq);
 
 #endif 

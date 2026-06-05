@@ -45,3 +45,24 @@ Node *pq_dequeue(PriorityQueue *pq) {
 int pq_kosong(PriorityQueue *pq) {
     return pq->head == NULL;
 }
+
+void tampil_pq_layak(PriorityQueue *pq) {
+    if (pq_kosong(pq)) {
+        printf("  (Tidak ada warga dalam antrian layak)\n");
+        return;
+    }
+
+    printf("\n============================================================\n");
+    printf("      ANTRIAN PENERIMA BANTUAN (LAYAK)  -  %d warga\n", pq->size);
+    printf("============================================================\n");
+    printf("%-4s %-20s %-10s %-12s\n", "No", "Nama", "Skor", "Desil Sistem");
+    printf("------------------------------------------------------------\n");
+
+    PQNode *cur = pq->head;
+    int no = 1;
+    while (cur != NULL) {
+        printf("%-4d %-20s %-10d %-12d\n", no++, cur->node->data.nama, cur->node->data.total_skor, cur->node->data.desil_sistem);
+        cur = cur->next;
+    }
+    printf("============================================================\n");
+}
