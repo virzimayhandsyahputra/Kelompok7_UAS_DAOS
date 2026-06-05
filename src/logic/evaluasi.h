@@ -1,7 +1,9 @@
 #ifndef evaluasi_h
 #define evaluasi_h
 
-#include "warga.h"
+#include "../warga.h"
+#include "../data_structures/queue.h"
+#include "../data_structures/priority_queue.h"
 
 int  bandingkan_desil(int desil_sistem);
 void tentukan_status(Warga* w);
