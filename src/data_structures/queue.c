@@ -42,3 +42,24 @@ Node *dequeue(Queue *q) {
 int queue_kosong(Queue *q) {
     return q->front == NULL;
 }
+
+void tampil_queue_verifikasi(Queue *q) {
+    if (queue_kosong(q)) {
+        printf("  (Tidak ada warga dalam antrian verifikasi)\n");
+        return;
+    }
+
+    printf("\n============================================================\n");
+    printf("         ANTRIAN VERIFIKASI  (%d warga)\n", q->size);
+    printf("============================================================\n");
+    printf("%-4s %-20s %-10s %-11s\n", "No", "Nama", "Skor", "Desil BPJS Sekarang");
+    printf("------------------------------------------------------------\n");
+
+    QueueNode *cur = q->front;
+    int no = 1;
+    while (cur != NULL) {
+        printf("%-4d %-20s %-10d %-15d\n", no++, cur->node->data.nama, cur->node->data.total_skor, cur->node->data.desil_bpjs_sekarang);
+        cur = cur->next;
+    }
+    printf("============================================================\n");
+}
