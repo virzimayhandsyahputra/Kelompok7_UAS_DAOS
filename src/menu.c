@@ -170,3 +170,38 @@ static void opsi_evaluasi(Node *head, PriorityQueue *pq, Queue *q_verif) {
 
     alokasi_bantuan(pq, kuota);
 }
+
+// Option 4
+static void opsi_cari_warga(Node *head) {
+    if (head == NULL) {
+        printf("\n[!] Belum ada data warga.\n");
+        return;
+    }
+
+    char nama_cari[100];
+    printf("\nMasukkan nama warga yang dicari: ");
+    baca_string(nama_cari, sizeof(nama_cari));
+
+    Node *hasil = search_warga(head, nama_cari);
+    tampilkanWarga(hasil);
+}
+
+// Option 5
+static void opsi_urutkan(Node **head) {
+    if (*head == NULL) {
+        printf("\n[!] Belum ada data warga.\n");
+        return;
+    }
+
+    // Cek apakah scoring sudah pernah dijalankan
+    if ((*head)->data.total_skor == 0 && (*head)->data.desil_sistem == 0) {
+        printf("\n[!] Jalankan Opsi 3 terlebih dahulu untuk menghitung skor.\n");
+        return;
+    }
+
+    printf("\n[...] Mengurutkan data warga berdasarkan skor...\n");
+    *head = mergeSort(*head);
+    printf("[+] Pengurutan selesai.\n");
+
+    tampil_warga_urut(*head);
+}
