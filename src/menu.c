@@ -205,3 +205,4 @@ static void opsi_urutkan(Node **head) {
 
     tampil_warga_urut(*head);
 }
+
