@@ -206,3 +206,57 @@ static void opsi_urutkan(Node **head) {
     tampil_warga_urut(*head);
 }
 
+// Tampilan Menu utama
+void tampilkan_menu(void) {
+    printf("\n============================================================\n");
+    printf("   DAOS - Sistem Evaluasi Kelayakan Bantuan BPJS\n");
+    printf("============================================================\n");
+    printf("  [1] Input data warga\n");
+    printf("  [2] Tampilkan semua data warga\n");
+    printf("  [3] Hitung skor, evaluasi & alokasi bantuan\n");
+    printf("  [4] Cari warga\n");
+    printf("  [5] Urutkan data berdasarkan skor\n");
+    printf("  [0] Keluar\n");
+    printf("------------------------------------------------------------\n");
+    printf("Pilihan: ");
+}
+
+// loop menu utama
+void jalankan_menu(Node **head, PriorityQueue *pq, Queue *q_verif) {
+    int pilihan;
+
+    do {
+        tampilkan_menu();
+        if (scanf("%d", &pilihan) != 1) {
+            bersihkan_buffer();
+            pilihan = -1;
+        } else {
+            bersihkan_buffer();
+        }
+
+        switch (pilihan) {
+            case 1: 
+                opsi_input_warga(head);              
+                break;
+            case 2: 
+                opsi_tampilkan_warga(*head);         
+                break;
+            case 3: 
+                opsi_evaluasi(*head, pq, q_verif);  
+                break;
+            case 4: 
+                opsi_cari_warga(*head);              
+                break;
+            case 5: 
+                opsi_urutkan(head);                  
+                break;
+            case 0: 
+                printf("\nTerima kasih. Program selesai.\n"); 
+                break;
+            default: 
+                printf("\n[!] Pilihan tidak valid, coba lagi.\n");
+        }
+
+    } while (pilihan != 0);
+}
+
