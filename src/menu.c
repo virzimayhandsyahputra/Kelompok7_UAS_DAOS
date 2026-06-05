@@ -125,3 +125,48 @@ static void opsi_tampilkan_warga(Node *head) {
         cur = cur->next;
     }
 }
+
+// Opsi 3
+static void opsi_evaluasi(Node *head, PriorityQueue *pq, Queue *q_verif) {
+    if (head == NULL) {
+        printf("\n[!] Belum ada data warga untuk dievaluasi.\n");
+        return;
+    }
+
+    // Reset PQ dan Queue sebelum proses ulang
+    init_pq(pq);
+    init_queue(q_verif);
+
+    printf("\n[...] Menghitung skor dan mengevaluasi semua warga...\n");
+
+    // masuk PQ atau Queue
+    proses_semua_warga(head, q_verif, pq);
+
+    printf("[+] Evaluasi selesai.\n");
+
+    /* Tampilkan ringkasan hasil evaluasi */
+    printf("\n============================================================\n");
+    printf("                   HASIL EVALUASI\n");
+    printf("============================================================\n");
+    printf("%-4s %-20s %-6s %-7s %-18s\n",
+           "No", "Nama", "Skor", "Desil", "Status");
+    printf("------------------------------------------------------------\n");
+
+    Node *cur = head;
+    int no = 1;
+    while (cur != NULL) {
+        printf("%-4d %-20s %-6d %-7d %-18s\n", no++, cur->data.nama, cur->data.total_skor, cur->data.desil_sistem, cur->data.status);
+        cur = cur->next;
+    }
+    printf("============================================================\n");
+
+    tampil_queue_verifikasi(q_verif);
+
+    // Jalankan greedy 
+    printf("\nMasukkan kuota bantuan yang tersedia: ");
+    int kuota;
+    scanf("%d", &kuota);
+    bersihkan_buffer();
+
+    alokasi_bantuan(pq, kuota);
+}
