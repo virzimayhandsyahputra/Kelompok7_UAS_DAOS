@@ -38,3 +38,7 @@ Node *dequeue(Queue *q) {
     q->size--;
     return node;
 }
+
+int queue_kosong(Queue *q) {
+    return q->front == NULL;
+}
