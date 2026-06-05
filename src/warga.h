@@ -24,17 +24,27 @@ typedef struct Node {
 
 // struct queueu
 typedef struct QueueNode {
-    Node             *node;
+    Node *node;
     struct QueueNode *next;
 } QueueNode;
 
 typedef struct Queue {
     QueueNode *front;
     QueueNode *rear;
-    int        size;
+    int size;
 } Queue;
 
+// Priority queue
+typedef struct PQNode {
+    Node *node;
+    int prioritas;
+    struct PQNode *next;
+} PQNode;
 
+typedef struct PriorityQueue {
+    PQNode *head;
+    int size;
+} PriorityQueue;
 
 
 #endif
