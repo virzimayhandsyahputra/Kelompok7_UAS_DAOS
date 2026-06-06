@@ -18,16 +18,6 @@ void tentukan_status(Warga* w) {
         strncpy(w->status, "Tidak Layak", sizeof(w->status) - 1);
     w->status[sizeof(w->status) - 1] = '\0';
 }
-
-void tentukan_status(Warga *w) {
-    if (w->total_skor >= 60)
-        strncpy(w->status, "Layak", sizeof(w->status) - 1);
-    else if (w->total_skor >= 40)
-        strncpy(w->status, "Perlu Verifikasi", sizeof(w->status) - 1);
-    else
-        strncpy(w->status, "Tidak Layak", sizeof(w->status) - 1);
-    w->status[sizeof(w->status) - 1] = '\0';
-}
  
 void evaluasi_warga(Node *node, Queue *q_verifikasi, PriorityQueue *pq_layak) {
     Warga *w = &node->data;
