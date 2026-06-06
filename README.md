@@ -53,7 +53,7 @@ PROJECT-UAS-TIM-6
 |    ├── main.c
 |    ├── menu.c
 |    ├── menu.h
-|    └── wagra.h
+|    └── warga.h
 ├── makefile
 ├── README.md
 └── LICENSE
