@@ -5,7 +5,7 @@
 #include "../data_structures/queue.h"
 #include "../data_structures/priority_queue.h"
 
-int  bandingkan_desil(int desil_sistem);
+int bandingkan_desil(int desil_pemerintah, int desil_sistem);
 void tentukan_status(Warga* w);
 void evaluasi_warga(Node* node, Queue* q_verifikasi, PriorityQueue* pq_layak);
 
