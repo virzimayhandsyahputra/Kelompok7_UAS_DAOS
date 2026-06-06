@@ -1,4 +1,12 @@
 # **Kelompok 2 UAS**
+<p align="center">
+<img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Platform-CLI%20Application-darkgoldenrod?style=for-the-badge">
+<img src="https://img.shields.io/badge/Project-Academic-gold?style=for-the-badge">
+<img src="https://img.shields.io/badge/Contributors-5-darkred?style=for-the-badge">
+<img src="https://img.shields.io/badge/University-USK-darkgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Completed-lightgreen?style=for-the-badge">
+</p>
 # 👥 **Anggota Kelompok**
 
 | No | Nama                        | NPM             |
